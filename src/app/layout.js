@@ -18,8 +18,14 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
   // const {buses}= await FindAvailableRegisteredBusesAction()
-  const { availableBuses } = await FindAvailableBusByDateAction();
 
+  // const { availableBuses } = await FindAvailableBusByDateAction();
+
+  const res = await fetch("http://localhost:3000/api/availableBusByDate", {
+    cache: "no-store",
+  })
+  const {availableBuses}=await res.json()
+  console.log(availableBuses);
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -30,13 +36,11 @@ export default async function RootLayout({ children }) {
                 <Image src={Logo} alt="BookNow" className="w-[170px]"></Image>
               </Link>
               <div className="hidden md:block">
-              <div className="flex flex-row space-x-5 items-center">
-                <Link href="/"> Home </Link>
-                <Link href="/BusRegisterPage"> Bus Register </Link>
-                <Link href="/AvailableBusesPage">Available Buses</Link>
+                <div className="flex flex-row space-x-5 items-center">
+                  <Link href="/"> Home </Link>
+                  <Link href="/BusRegisterPage"> Bus Register </Link>
+                </div>
               </div>
-              </div>
-
             </div>
             <Menu></Menu>
             <UpdateAvailableBuses buses={availableBuses} />

@@ -4,7 +4,7 @@ import React from 'react'
 async function DeleteTicketsByBusIdAction(busId) {
   console.log("hereee",busId)
     try {
-        const res=await fetch(`https://busknow.pages.dev/api/tickets/${busId}`,{
+        const res=await fetch(`http://localhost:3000/api/tickets/${busId}`,{
           method:"DELETE"
         })
         if (!res.ok) {

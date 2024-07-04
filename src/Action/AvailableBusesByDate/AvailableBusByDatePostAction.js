@@ -9,7 +9,7 @@ async function AvailableBusByDatePostAction(from,destination,date,availavleBusID
     
     try{
 
-        const res=await fetch("https://busknow.pages.dev/api/availableBusByDate",{
+        const res=await fetch("http://localhost:3000/api/availableBusByDate",{
             method:"POST",
             headers: {
                 "content-type": "applicatiion/json",

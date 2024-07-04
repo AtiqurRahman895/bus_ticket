@@ -3,7 +3,7 @@ import React from 'react'
 
 async function FindAvailableRegisteredBusesAction() {
     try {
-        const res = await fetch("https://busknow.pages.dev/api/availableRegisteredBus", {
+        const res = await fetch("http://localhost:3000/api/availableRegisteredBus", {
           cache: "no-store",
         });
         if (!res.ok) {

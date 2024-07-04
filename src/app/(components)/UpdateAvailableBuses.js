@@ -33,6 +33,7 @@ export function UpdateAvailableBuses({ buses }) {
   };
   useEffect(() => {
     getBusData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const deleteBus = async (index) => {
@@ -88,6 +89,7 @@ export function UpdateAvailableBuses({ buses }) {
       );
       checkDateAndDelete();
     }, 1000);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

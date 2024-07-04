@@ -18,6 +18,9 @@ function BusSearchFrom() {
   });
 
   const allBuses = async () => {
+    // const availableBuses = await fetch("http://localhost:3000/api/availableBusByDate", {
+    //   cache: "no-store",
+    // })
     const { availableBuses } = await FindAvailableBusByDateAction();
     setBuses(availableBuses);
   };

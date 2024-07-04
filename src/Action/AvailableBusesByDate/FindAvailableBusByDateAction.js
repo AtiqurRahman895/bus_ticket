@@ -3,14 +3,14 @@
 
 async function FindAvailableBusByDateAction() {
     try {
-        const availableBuses = await fetch("https://busknow.pages.dev/availableBusByDate", {
+        const res = await fetch("http://localhost:3000/api/availableBusByDate", {
           cache: "no-store",
         });
-        if (!availableBuses.ok) {
+        if (!res.ok) {
           throw new Error("failed to fetch data");
         }
 
-        return await availableBuses.json();
+        return await res.json();
       } catch (err) {
         console.log("error loading topics: ", err);
       }

@@ -6,7 +6,7 @@ async function FindAvailableBusWithConditionsAction(from,destination) {
 
     try{
         console.log("trying to Find Available Bus With Conditions")
-        const availableBuses=await fetch(`https://busknow.pages.dev/api/findAvailableBusWithConditions?from=${from}&destination=${destination}`,{
+        const availableBuses=await fetch(`http://localhost:3000/api/findAvailableBusWithConditions?from=${from}&destination=${destination}`,{
             cache:"no-store",
         })
         // if(!availableBuses.ok){
