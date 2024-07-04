@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    body{
+        @apply bg-page  text-default-text
+    }
+    h1{
+        @apply text-[clamp(2rem,1.6rem+2vw,4rem)]
+    }
+    h2{
+        @apply text-3xl
+    }
+    h3{
+        @apply text-xl
+    }
+    p{
+        @apply text-[1rem]
+    }
+    Link{
+        @apply cursor-pointer hover:text-green-2
+    }
+
+}
+
