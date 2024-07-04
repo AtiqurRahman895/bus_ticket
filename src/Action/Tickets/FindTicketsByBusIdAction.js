@@ -5,7 +5,7 @@ async function FindTicketsByBusIdAction(id) {
 
   try {
     
-    const res=await fetch(`http://localhost:3000/api/tickets/${id}`,{
+    const res=await fetch(`https://busknow.pages.dev/api/tickets/${id}`,{
       cache:"no-store"
     })
     if (!res.ok) {

@@ -22,7 +22,7 @@ export async function BusRegisterAction(data) {
   // Post/Creat
 
   try {
-    const res = await fetch("http://localhost:3000/api/busRegister/", {
+    const res = await fetch("https://busknow.pages.dev/api/busRegister/", {
       method: "POST",
       headers: {
         "content-type": "application/json",

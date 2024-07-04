@@ -13,7 +13,7 @@ async function AvailableRegisteredBusPostAction(
 ) {
   try {
     const res = await fetch(
-      "http://localhost:3000/api/availableRegisteredBus",
+      "https://busknow.pages.dev/api/availableRegisteredBus",
       {
         method: "POST",
         headers: {

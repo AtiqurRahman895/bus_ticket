@@ -4,7 +4,7 @@ import React from "react";
 async function BookingTicketsByIdAction(id) {
   const ticketState="booked";
   try {
-    const res = await fetch(`http://localhost:3000/api/tickets/${id}`, {
+    const res = await fetch(`https://busknow.pages.dev/api/tickets/${id}`, {
       method: "PUT",
       // headers: {
       //   "content-type": "application/json",

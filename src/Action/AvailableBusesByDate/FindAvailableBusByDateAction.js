@@ -3,7 +3,7 @@
 
 async function FindAvailableBusByDateAction() {
     try {
-        const availableBuses = await fetch("http://localhost:3000/api/availableBusByDate", {
+        const availableBuses = await fetch("https://busknow.pages.dev/availableBusByDate", {
           cache: "no-store",
         });
         if (!availableBuses.ok) {

@@ -4,7 +4,7 @@ import React from 'react'
 async function FindSingleAvailableBusByDateByIdAction(id) {
     try {
       console.log(id)
-        const res= await fetch(`http://localhost:3000/api/availableBusByDate/${id}`,{
+        const res= await fetch(`https://busknow.pages.dev/api/availableBusByDate/${id}`,{
             cache:"no-store"
           })
         if (!res.ok) {

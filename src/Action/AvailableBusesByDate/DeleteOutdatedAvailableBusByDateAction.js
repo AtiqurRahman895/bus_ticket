@@ -3,7 +3,7 @@ import React from 'react'
 
 async function DeleteOutdatedAvailableBusByDateAction(availavleBusID) {
   console.log("in process of deleting 111 ", availavleBusID);
-  try{const res=await fetch("http://localhost:3000/api/availableBusByDate",{
+  try{const res=await fetch("https://busknow.pages.dev/api/availableBusByDate",{
     method:"DELETE",
     headers: {
       "content-type": "application/json",
